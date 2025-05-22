@@ -6,6 +6,7 @@ type bahanMakanan struct {
 	nama                                                   string
 	jumlahStok                                             int
 	tanggalKadaluwarsa, bulanKadaluwarsa, tahunKadaluwarsa int
+	sudahDipakai                                           bool
 }
 
 type tabMakanan [100]bahanMakanan
