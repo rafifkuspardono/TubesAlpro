@@ -1,19 +1,13 @@
 package main
 
-import "fmt"
-
-type bahanMakanan struct {
-	nama                                                   string
-	jumlahStok                                             int
-	tanggalKadaluwarsa, bulanKadaluwarsa, tahunKadaluwarsa int
-	sudahDipakai                                           bool
-}
-
-type tabMakanan [100]bahanMakanan
+import (
+	"TubesAlpro/manajemenData"
+	"fmt"
+)
 
 func main() {
 	var pilihan, nData int
-	var makanan tabMakanan
+	var makanan manajemenData.TabMakanan
 
 	for {
 		menu()
@@ -22,7 +16,7 @@ func main() {
 
 		switch pilihan {
 		case 2:
-			tambahData(&makanan, &nData)
+			manajemenData.TambahData(&makanan, &nData)
 		}
 
 	}
