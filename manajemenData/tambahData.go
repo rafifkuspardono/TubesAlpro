@@ -2,7 +2,7 @@ package manajemenData
 
 import "fmt"
 
-unc tambahData(A *tabMakanan, n *int) {
+func TambahData(A *TabMakanan, n *int) {
 	var i, batas int
 	fmt.Println("\nJumlah makanan yang ingin ditambahkan: ")
 	fmt.Scan(&batas)
