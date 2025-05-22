@@ -15,6 +15,8 @@ func main() {
 		fmt.Scan(&pilihan)
 
 		switch pilihan {
+		case 1:
+			manajemenData.PrintData(makanan, nData)
 		case 2:
 			manajemenData.TambahData(&makanan, &nData)
 		}
