@@ -14,13 +14,15 @@ func main() {
 		fmt.Println("Masukkan opsi: \n")
 		fmt.Scan(&pilihan)
 
-    switch pilihan {
+		switch pilihan {
 		case 1:
 			manajemenData.PrintData(makanan, nData)
 		case 2:
 			manajemenData.TambahData(&makanan, &nData)
 		case 3:
 			manajemenData.HapusData(&makanan, &nData)
+		case 4:
+			manajemenData.UbahData(&makanan, nData)
 		}
 
 	}
@@ -31,5 +33,6 @@ func menu() {
 	fmt.Println("1. Daftar Bahan Makanan")
 	fmt.Println("2. Tambah Data Makanan")
 	fmt.Println("3. Hapus Data Makanan")
+	fmt.Println("4. Ubah Data Makanan")
 	fmt.Println("0. KELUAR\n")
 }
