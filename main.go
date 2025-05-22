@@ -3,34 +3,55 @@ package main
 import "fmt"
 
 type bahanMakanan struct {
-	nama, kadaluwarsa string
-	stok int 
+	nama                                                   string
+	jumlahStok                                             int
+	tanggalKadaluwarsa, bulanKadaluwarsa, tahunKadaluwarsa int
 }
 
-type arrBahan [100]bahanMakanan
+type tabMakanan [100]bahanMakanan
 
 func main() {
-	var makanan bahanMakanan
-	
-	menu()
+	var pilihan, nData int
+	var makanan tabMakanan
+
+	for {
+		menu()
+		fmt.Println("Masukkan opsi: \n")
+		fmt.Scan(&pilihan)
+
+		switch pilihan {
+		case 1:
+			printData(makanan, nData)
+		case 2:
+			tambahData(&makanan, &nData)
+		}
+
+	}
 }
 
 func menu() {
-	fmt.Println("\n		====== APLIKASI MANAJEMEN STOK BAHAN MAKANAN ======\n")
-	fmt.Println("1. Tambah Bahan Makanan")
-	fmt.Println("2. Ubah Data Bahan Makanan")
-	fmt.Println("3. Hapus Data Bahan Makanan")
-	fmt.Println("4. Mencari Bahan Makanan (sequential)")
-	fmt.Println("5. Mencari Bahan Makanan (Binary)")
-	fmt.Println("6. Mengurutkan Berdasarkan Tanggal Kadaluwarsa (Selection)")
-	fmt.Println("7. Mengurutkan Berdasarkan Jumlah Stok (Insertion)")
-	fmt.Println("8. Apakah Bahan Makanan Mendekati Expired?")
-	fmt.Println("9. Total Bahan Makanan yang Tersedia")
-	fmt.Println("10. Total Bahan Makanan yang telah Digunakan\n")
+	fmt.Println("\n\t====== APLIKASI MANAJEMEN STOK BAHAN MAKANAN ======")
+	fmt.Println("1. Daftar Bahan Makanan")
+	fmt.Println("2. Tambah Data Makanan")
 	fmt.Println("0. KELUAR\n")
-
 }
 
-func tambahData(list *arrBahan, n *int) {
-	
+func tambahData(A *tabMakanan, n *int) {
+	var i, batas int
+	fmt.Println("\nJumlah makanan yang ingin ditambahkan: ")
+	fmt.Scan(&batas)
+	for i = 0; i < batas; i++ {
+		fmt.Println("Masukkan nama makanan: ")
+		fmt.Scan(&A[*n].nama)
+		fmt.Println("Masukkan jumlah Stok: ")
+		fmt.Scan(&A[*n].jumlahStok)
+		fmt.Println("Masukkan tanggal kadaluwarsa: ")
+		fmt.Scan(&A[*n].tanggalKadaluwarsa)
+		fmt.Println("Masukkan bulan kadaluwarsa: ")
+		fmt.Scan(&A[*n].bulanKadaluwarsa)
+		fmt.Println("Masukkan tahun kadaluwarsa: ")
+		fmt.Scan(&A[*n].tahunKadaluwarsa)
+		fmt.Println("Data makanan berhasil ditambahkan")
+		*n = *n + 1
+	}
 }
