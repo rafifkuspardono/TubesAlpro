@@ -1,6 +1,7 @@
 package main
 
 import (
+	"TubesAlpro/kadaluarsa"
 	"TubesAlpro/manajemenData"
 	"fmt"
 )
@@ -23,6 +24,15 @@ func main() {
 			manajemenData.HapusData(&makanan, &nData)
 		case 4:
 			manajemenData.UbahData(&makanan, nData)
+		case 5:
+			var hariSekarang, bulanSekarang, tahunSekarang int
+			fmt.Println("Masukkan tanggal hari ini: ")
+			fmt.Scan(&hariSekarang, &bulanSekarang, &tahunSekarang)
+			fmt.Println("Masukkan bulan hari ini: ")
+			fmt.Scan(&bulanSekarang)
+			fmt.Println("Masukkan tahun hari ini: ")
+			fmt.Scan(&tahunSekarang)
+			kadaluarsa.PeringatanKadaluarsa(makanan, nData, hariSekarang, bulanSekarang, tahunSekarang)
 		}
 
 	}
@@ -34,5 +44,6 @@ func menu() {
 	fmt.Println("2. Tambah Data Makanan")
 	fmt.Println("3. Hapus Data Makanan")
 	fmt.Println("4. Ubah Data Makanan")
+	fmt.Println("5. Peringatan Kadaluarsa")
 	fmt.Println("0. KELUAR\n")
 }

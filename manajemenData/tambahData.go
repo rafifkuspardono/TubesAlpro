@@ -8,17 +8,17 @@ func TambahData(A *TabMakanan, n *int) {
 	fmt.Scan(&batas)
 	for i = 0; i < batas; i++ {
 		fmt.Println("Masukkan nama makanan: ")
-		fmt.Scan(&A[*n].nama)
+		fmt.Scan(&A[*n].Nama)
 		fmt.Println("Masukkan jumlah Stok: ")
-		fmt.Scan(&A[*n].jumlahStok)
+		fmt.Scan(&A[*n].JumlahStok)
 		fmt.Println("Masukkan tanggal kadaluwarsa: ")
-		fmt.Scan(&A[*n].tanggalKadaluwarsa)
+		fmt.Scan(&A[*n].TanggalKadaluwarsa)
 		fmt.Println("Masukkan bulan kadaluwarsa: ")
-		fmt.Scan(&A[*n].bulanKadaluwarsa)
+		fmt.Scan(&A[*n].BulanKadaluwarsa)
 		fmt.Println("Masukkan tahun kadaluwarsa: ")
-		fmt.Scan(&A[*n].tahunKadaluwarsa)
+		fmt.Scan(&A[*n].TahunKadaluwarsa)
 		fmt.Println("Status (sudah/belum digunakan)")
-		fmt.Scan(&A[*n].sudahDipakai)
+		fmt.Scan(&A[*n].SudahDipakai)
 		fmt.Println("Data makanan berhasil ditambahkan")
 		*n = *n + 1
 	}
