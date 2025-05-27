@@ -23,6 +23,12 @@ func main() {
 			manajemenData.HapusData(&makanan, &nData)
 		case 4:
 			manajemenData.UbahData(&makanan, nData)
+		case 5:
+			var hariSekarang, bulanSekarang, tahunSekarang int
+			fmt.Print("Masukkan tanggal hari ini: ")
+			fmt.Scan(&hari, &bulan, &tahun)
+			selectionSortKadaluarsa(&data, n)
+			peringatanKadaluarsa(data, n, hari, bulan, tahun)
 		}
 
 	}
@@ -34,5 +40,6 @@ func menu() {
 	fmt.Println("2. Tambah Data Makanan")
 	fmt.Println("3. Hapus Data Makanan")
 	fmt.Println("4. Ubah Data Makanan")
+	fmt.Println("5. Peringatan Kadaluarsa")
 	fmt.Println("0. KELUAR\n")
 }
