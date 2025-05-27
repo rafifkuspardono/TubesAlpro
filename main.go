@@ -1,6 +1,7 @@
 package main
 
 import (
+	"TubesAlpro/kadaluarsa"
 	"TubesAlpro/manajemenData"
 	"fmt"
 )
@@ -25,10 +26,13 @@ func main() {
 			manajemenData.UbahData(&makanan, nData)
 		case 5:
 			var hariSekarang, bulanSekarang, tahunSekarang int
-			fmt.Print("Masukkan tanggal hari ini: ")
-			fmt.Scan(&hari, &bulan, &tahun)
-			selectionSortKadaluarsa(&data, n)
-			peringatanKadaluarsa(data, n, hari, bulan, tahun)
+			fmt.Println("Masukkan tanggal hari ini: ")
+			fmt.Scan(&hariSekarang, &bulanSekarang, &tahunSekarang)
+			fmt.Println("Masukkan bulan hari ini: ")
+			fmt.Scan(&bulanSekarang)
+			fmt.Println("Masukkan tahun hari ini: ")
+			fmt.Scan(&tahunSekarang)
+			kadaluarsa.PeringatanKadaluarsa(makanan, nData, hariSekarang, bulanSekarang, tahunSekarang)
 		}
 
 	}

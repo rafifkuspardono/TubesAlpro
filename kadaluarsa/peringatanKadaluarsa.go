@@ -1,18 +1,21 @@
 package kadaluarsa
 
-import "fmt"
+import (
+	"TubesAlpro/manajemenData"
+	"fmt"
+)
 
-func peringatanKadaluarsa(A TabMakanan, n int, hari, bulan, tahun int) {
+func PeringatanKadaluarsa(A manajemenData.TabMakanan, n int, hari, bulan, tahun int) {
 	fmt.Println("\nBahan makanan yang akan kadaluarsa dalam 7 hari:")
 	tidakAda := true
 
 	for i := 0; i < n; i++ {
-		if !data[i].sudahDipakai {
-			ok, sisa := dalam7Hari(hari, bulan, tahun, A[i].tanggalKadaluwarsa, A[i].bulanKadaluwarsa, A[i].tahunKadaluwarsa)
+		if !A[i].SudahDipakai {
+			ok, sisa := CekKadaluarsa(hari, bulan, tahun, A[i].TanggalKadaluwarsa, A[i].BulanKadaluwarsa, A[i].TahunKadaluwarsa)
 			if ok {
 				tidakAda = false
 				fmt.Printf("%s - Kadaluarsa: %02d-%02d-%04d (sisa %d hari)\n",
-					A[i].nama, A[i].tanggalKadaluwarsa, A[i].bulanKadaluwarsa, A[i].tahunKadaluwarsa, sisa)
+					A[i].Nama, A[i].TanggalKadaluwarsa, A[i].BulanKadaluwarsa, A[i].TahunKadaluwarsa, sisa)
 			}
 		}
 	}
