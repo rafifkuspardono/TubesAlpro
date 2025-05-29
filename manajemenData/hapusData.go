@@ -8,7 +8,7 @@ func HapusData(A *TabMakanan, n *int) {
 	fmt.Print("Masukkan nama bahan yang akan dihapus: ")
 	fmt.Scan(&nama)
 	for i = 0; i < *n; i++ {
-		if A[i].nama == nama {
+		if A[i].Nama == nama {
 			for j = i; j < *n-1; j++ {
 				A[j] = A[j+1]
 			}
