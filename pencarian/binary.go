@@ -4,17 +4,6 @@ import (
 	"TubesAlpro/manajemenData"
 )
 
-func SeqSearch(T manajemenData.TabMakanan, n int, X string) int {
-	var idx int = -1
-	var i int
-	for i = 0; i < n && idx == -1; i++ {
-		if T[i].Nama == X {
-			idx = i
-		}
-	}
-	return idx
-}
-
 func BinarySearch(T manajemenData.TabMakanan, n int, X string) int {
 	var left, right, mid int
 	var found int = -1

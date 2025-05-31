@@ -3,6 +3,7 @@ package main
 import (
 	"TubesAlpro/kadaluarsa"
 	"TubesAlpro/manajemenData"
+	"TubesAlpro/pencarian"
 	"fmt"
 )
 
@@ -33,6 +34,9 @@ func main() {
 			fmt.Println("Masukkan tahun hari ini: ")
 			fmt.Scan(&tahunSekarang)
 			kadaluarsa.PeringatanKadaluarsa(makanan, nData, hariSekarang, bulanSekarang, tahunSekarang)
+		case 6:
+			pencarian.CariSequentialSearch(makanan, nData)
+
 		}
 
 	}
@@ -45,5 +49,7 @@ func menu() {
 	fmt.Println("3. Hapus Data Makanan")
 	fmt.Println("4. Ubah Data Makanan")
 	fmt.Println("5. Peringatan Kadaluarsa")
+	fmt.Println("6. Cari Data (Sequential)")
+	fmt.Println("7. Cari Data (Binary)")
 	fmt.Println("0. KELUAR\n")
 }
