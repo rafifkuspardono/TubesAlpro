@@ -37,6 +37,8 @@ func main() {
 			kadaluarsa.PeringatanKadaluarsa(makanan, nData, hariSekarang, bulanSekarang, tahunSekarang)
 		case 6:
 			pencarian.CariSequentialSearch(makanan, nData)
+		case 8:
+			fmt.Println("belum ada hehe")
 		case 7:
 			pengurutan.SelectionSortKadaluarsa(&makanan, nData)
 			manajemenData.PrintData(makanan, nData)
