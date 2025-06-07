@@ -39,7 +39,7 @@ func main() {
 		case 6:
 			pencarian.CariSequentialSearch(makanan, nData)
 		case 7:
-			fmt.Println("belum ada hehe")
+			pencarian.CariBinary(&makanan, nData)
 		case 8:
 			pengurutan.SelectionSortKadaluarsa(&makanan, nData)
 			manajemenData.PrintData(makanan, nData)
