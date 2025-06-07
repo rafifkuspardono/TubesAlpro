@@ -2,6 +2,7 @@ package main
 
 import (
 	"TubesAlpro/kadaluarsa"
+	"TubesAlpro/laporan"
 	"TubesAlpro/manajemenData"
 	"TubesAlpro/pencarian"
 	"TubesAlpro/pengurutan"
@@ -37,14 +38,21 @@ func main() {
 			kadaluarsa.PeringatanKadaluarsa(makanan, nData, hariSekarang, bulanSekarang, tahunSekarang)
 		case 6:
 			pencarian.CariSequentialSearch(makanan, nData)
-		case 8:
-			fmt.Println("belum ada hehe")
 		case 7:
+			fmt.Println("belum ada hehe")
+		case 8:
 			pengurutan.SelectionSortKadaluarsa(&makanan, nData)
 			manajemenData.PrintData(makanan, nData)
-		case 8:
+		case 9:
 			pengurutan.InsertionSortStok(&makanan, nData)
 			manajemenData.PrintData(makanan, nData)
+		case 10:
+			laporan.LaporanTotal(makanan, nData)
+		case 0:
+			fmt.Println("Terima Kasih ;)")
+			return
+		default:
+			fmt.Println("Pilihan tidak valid")
 		}
 
 	}
@@ -61,5 +69,6 @@ func menu() {
 	fmt.Println("7. Cari Data (Binary)")
 	fmt.Println("8. Pengurutan Data (Selection)")
 	fmt.Println("9. Pengurutan Data (Insertion)")
+	fmt.Println("10. Laporan Total Bahan Makanan")
 	fmt.Println("0. KELUAR\n")
 }
