@@ -1,0 +1,10 @@
+Gula	3	15	6	2025	false
+Telur	12	10	6	2025	true
+Minyak	1	1	7	2025	false
+Beras	5	20	6	2025	false
+Garam	2	18	6	2025	true
+Mentega	4	22	6	2025	false
+Sarden	6	28	6	2025	false
+MieInstan	10	25	6	2025	false
+Kecap	2	5	7	2025	true
+SausTomat	3	30	6	2025	false
